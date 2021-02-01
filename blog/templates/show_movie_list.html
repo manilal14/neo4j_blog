@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <h2>Home</h2>
+  <br>
+
+  <h3>Today's Recent Posts</h3>
+  <ul class="posts">
+    {% for row in movieList %}
+      <li>
+        <b>{{ row["title"] }}</b> {{ row["released"] }}
+        <br>
+        {{ row["tagline"] }}
+      </li>
+    {% else %}
+      <li>There aren't any Movies!</li>>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}
